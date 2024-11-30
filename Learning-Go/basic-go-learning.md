@@ -91,6 +91,107 @@
   | 1      | \|\|             |
 
 
+# Day2 
+
+## 语言条件语句
+
+- if condition1 {
+      // 当 condition1 为 true 时执行的代码
+  } else if condition2 {
+      // 当 condition1 为 false 且 condition2 为 true 时执行的代码
+  } else {
+      // 当所有条件都不满足时执行的代码
+  }
+
+  ****补充****
+
+  if condition1 && expensiveFunction() {
+      // 如果 condition1 为 false，则不会调用 expensiveFunction()
+  }
+
+  if condition1 || cheapFunction() {
+      // 如果 condition1 为 true，则不会调用 cheapFunction()
+  }
+
+- switch expression {
+  case value1:
+      // 当 expression 等于 value1 时执行的代码
+  case value2:
+      // 当 expression 等于 value2 时执行的代码
+  default:
+      // 当没有 case 匹配时执行的代码
+  }
+
+  
+
+### 循环语句
+
+- init： 一般为赋值表达式，给控制变量赋初值；
+
+- condition： 关系表达式或逻辑表达式，循环控制条件；
+
+- post： 一般为赋值表达式，给控制变量增量或减量。
+
+  
+
+- 类C语言的 for循环
+
+  for init; condition; post { }
+
+- 类C语言的while
+
+  for condition { }
+
+- 类C的for( ; ; )
+
+  for { }
+
+  
+
+- 例子：
+
+  package main
+
+  import "fmt"
+
+  // 计算 1 到 10 的数字之和
+  func main() {
+  	sum := 0
+  	for i := 0; i <= 10; i++ {
+  		sum += i
+  	}
+  	// 55
+  	fmt.Println(sum)
+  }
+
+- range 循环，对字符串、数组、切片进行迭代输出
+
+  for 循环的 range 格式可以省略 key 和 value
+
+  
+
+  
+
+**今天补一下输出的一些区别，敲代码的时候注意到的：Print系列函数会将内容输出到系统的标准输出，
+区别在于Print函数直接输出内容，Printf函数支持格式化输出字符串，Println函数会在输出内容的结尾添加一个换行符。**
+
+func Print(a ...interface{}) (n int, err error)
+
+func Printf(format string, a ...interface{}) (n int, err error)
+
+func Println(a ...interface{}) (n int, err error)
+
+举例如下：
+func main() {
+    fmt.Print("在终端打印该信息。")
+    name := "tree"
+    fmt.Printf("我是：%s\n", name)
+    fmt.Println("在终端打印单独一行显示")
+}
+输出：
+    在终端打印该信息。我是：tree
+    在终端打印单独一行显示
+
 
 
 
