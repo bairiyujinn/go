@@ -145,3 +145,42 @@ func main() {
 	
 }
 
+****************************************************
+package main
+
+import "fmt"
+
+func main() {
+	a := 100
+	b := 200
+	res := max(a, b)
+	fmt.Print(res)
+}
+
+func max(num1, num2 int) int {
+	if num1 > num2 {
+		return num1
+	} else {
+		return num2
+	}
+}
+
+输出：200
+*********************************************************
+
+package main
+
+import (
+	"fmt"
+	"main/caculate"
+)
+
+func main() {
+	fmt.Println(caculate.Add(1, 2))
+}
+
+package caculate
+
+func Add(a, b int) int {
+	return a + b
+}******在另一个子文件夹中
