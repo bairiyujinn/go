@@ -18,10 +18,11 @@ func main() {
 	area = length * width
 	fmt.Println(" 面积为 :", area)
 	println(a, b, c)
+	/*
         输出：
         面积为 : 50
         1 false str
-
+        */
 
         //itoa的用法
 	const (
@@ -36,8 +37,9 @@ func main() {
 		i
 	)
 	fmt.Println(a, b, c, d, e, f, g, h, i)
+	/*
         输出：0 1 2 what what 100 100 7 8
-
+        */
 
         //第二个例子
         const (
@@ -48,8 +50,10 @@ func main() {
         )
 	
 	fmt.Println(a, b, c, d)
+	/*
         输出：
         1 6 12 24
+	*/
         //由以上两个例子发现可能存在的规律是：iota的计算规律决定之后所有的计算准则
 }
 
@@ -60,9 +64,10 @@ func main(){
 	for i, s := range strings {
 		fmt.Println(i, s)
 	}
+	/*
 	输出：  0 candy
 	       1 toy
-
+        */
 
 	
         ***
@@ -70,6 +75,7 @@ func main(){
 	for i, x := range numbers {
 	fmt.Printf("第 %d 位 x 的值= %d\n", i, x)
 	}
+	/*
 	输出：
 	
 		    第 0 位 x 的值 = 1
@@ -78,7 +84,7 @@ func main(){
 		    第 3 位 x 的值 = 5
 		    第 4 位 x 的值 = 0
 		    第 5 位 x 的值 = 0
-
+         */
 
 	
 	***
@@ -91,23 +97,26 @@ func main(){
 	for key, value := range map1 {
 		fmt.Printf("key is:%d--value is: %f\n", key, value)
 	}
+	/*
 	输出：
 	key is:1--value is: 1.000000
 	key is:2--value is: 2.000000
 	key is:3--value is: 3.000000
-
+        */
 
 	
         ***
-	for key := range map1 {
-		fmt.Printf("key is: %d\n", key)
-	}
-	读取 key
+	/*
+        读取 key
 	输出：
 	key is: 1
 	key is: 2
 	key is: 3
 	key is: 4
+        */
+	for key := range map1 {
+		fmt.Printf("key is: %d\n", key)
+	}
 }
 
 //DAY3
