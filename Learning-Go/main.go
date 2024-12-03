@@ -1,7 +1,7 @@
 package main
-
 import "fmt"
 
+//DAY1
 func main() {
 
 	d := "runboo"
@@ -51,7 +51,10 @@ func main() {
         输出：
         1 6 12 24
         //由以上两个例子发现可能存在的规律是：iota的计算规律决定之后所有的计算准则
+}
 
+//DAY2
+func main(){
         ***
 	strings := []string{"candy", "toy"}
 	for i, s := range strings {
@@ -105,9 +108,10 @@ func main() {
 	key is: 2
 	key is: 3
 	key is: 4
+}
 
-
-	
+//DAY3
+func main(){
         ***
 	for _, value := range map1 {
 		fmt.Printf("value is: %f\n", value)
