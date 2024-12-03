@@ -268,6 +268,16 @@ func main() {
   balance := [5]float32{1:2.0,3:7.0}
 
 
+# Day 5
+### 指针(指针数组)
+
+- 声明：var var_name *var-type
+
+  var-type 为指针类型，var_name 为指针变量名
+
+- 空指针 nil
+
+- 指向指针的指针：var ptr **int;
 
 
 
