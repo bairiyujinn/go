@@ -162,3 +162,47 @@ func main(){
 	return a + b
         }//在另一个文件夹中
 }
+
+//DAY 4
+const MAX int = 3
+func main() {
+
+   ***
+   a := []int{10,100,200}
+   var i int
+   var ptr [MAX]*int;
+
+   for  i = 0; i < MAX; i++ {
+      ptr[i] = &a[i] /* 整数地址赋值给指针数组 */
+   }
+
+   for  i = 0; i < MAX; i++ {
+      fmt.Printf("a[%d] = %d\n", i,*ptr[i] )
+   }
+   /*
+   输出：
+   a[0] = 10
+   a[1] = 100
+   a[2] = 200
+   */
+
+   var a int
+   var ptr *int
+   var pptr **int
+   a = 3000
+   /* 指针 ptr 地址 */
+   ptr = &a
+   /* 指向指针 ptr 地址 */
+   pptr = &ptr
+   /* 获取 pptr 的值 */
+   fmt.Printf("变量 a = %d\n", a )
+   fmt.Printf("指针变量 *ptr = %d\n", *ptr )
+   fmt.Printf("指向指针的指针变量 **pptr = %d\n", **pptr)
+   /*
+   输出：
+   变量 a = 3000
+   指针变量 *ptr = 3000
+   指向指针的指针变量 **pptr = 3000
+   */
+
+}
