@@ -1,4 +1,4 @@
-#GOlang 
+# GOlang 
 
 **Day 1**
 
@@ -279,7 +279,58 @@ func main() {
 
 - 指向指针的指针：var ptr **int;
 
+# Day 6
+
+### 结构体
+
+- 定义：
+
+  type struct_variable_type struct {
+     member definition
+     member definition
+     ...
+     member definition
+  }
+
+- 如果要访问结构体成员，需要使用点号 **.** 操作符
 
 
+
+### 切片
+
+切片是对数组的抽象，切片的长度是不固定的，可以追加元素。
+
+定义或者创建切片
+
+- var identifier []type
+- var s []type = make([]type,len)
+
+- 初始化：
+
+  - s :=[] int {1,2,3 }  //直接初始化，[]表示是切片类型,其中cap = len = 3
+
+  - s := arr[:] //初始化切片s，是数组arr的引用
+
+  - s :=arr[startindex:endindex] //将arr中从下标startindex到endindex-1下的元素创建为一个切片
+
+  - s :=make([]int,len,cap) //内置函数make()初始化切片s,[]int标识为其元素类型
+
+- len():获取长度；   cap():测量切片最长可以到达多少
+
+  append()向切片添加元素； copy(y,x) :拷贝x的内容到y
+
+### map
+
+- 定义：map_variable := make(map[KeyType]ValueType, initialCapacity)
+
+   KeyType :键的类型，ValueType: 值的类型，initialCapacity :可选的参数，用于指定 Map 的初始容量。
+
+  // 创建一个空的 Map
+  m := make(map[string]int)
+
+  // 创建一个初始容量为 10 的 Map
+  m := make(map[string]int, 10)
+
+- delete()删除元素
 
 
