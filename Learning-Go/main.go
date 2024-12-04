@@ -208,12 +208,7 @@ func main() {
 }
 
 //DAY 5
-
 //斐波那契数列
-package main
-
-import "fmt"
-
 func fibonacci(n int) int {
 	if n < 2 {
 		return n
